@@ -1,0 +1,5 @@
+# .htaccess 파일에 Content Security Policy 설정 추가
+<IfModule mod_headers.c>
+    # 모든 출처를 허용하고, 인라인 스크립트와 스타일시트 사용을 허용
+    Header set Content-Security-Policy "default-src 'self' *; style-src 'self' 'unsafe-inline' *; script-src 'self' 'unsafe-inline' *; img-src 'self' * data:;"
+</IfModule>
