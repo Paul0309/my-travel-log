@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Photos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="reset.css">
+</head>
+<body>
+    <div id="nav-placeholder"></div>
+    <main>
+        <h1>여행의 추억</h1>
+        <p>My Travel Log</p>
+    </main>
+    
+    <!-- Audio Player -->
+    <audio id="background-music" loop></audio>
+
+    <!-- Volume Control -->
+    <button id="volume-button" class="volume-button">🔊</button>
+    <div class="volume-control">
+        <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0.5">
+        <button id="next-track" class="btn">⏭️</button>
+    </div>
+
+    <script>
+        // Define the music files for Italy.html
+        window.musicFiles = [
+            'music/Jahzzar - Enceladus.mp3',
+            'music/Jahzzar - sketch.mp3'
+        ];
+    </script>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder" style="text-align: center;"></div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
