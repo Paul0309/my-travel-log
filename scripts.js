@@ -5,9 +5,9 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(data => {
             document.getElementById('nav-placeholder').innerHTML = data;
         });
-    
+
     // 푸터 로드
-    fetch('../footer.html')
+    fetch('footer.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('footer-placeholder').innerHTML = data;
@@ -31,23 +31,17 @@ document.addEventListener('DOMContentLoaded', function() {
     function playNextTrack() {
         if (musicFiles.length > 0) {
             backgroundMusic.src = musicFiles[currentTrackIndex];
-            console.log(`Playing track: ${backgroundMusic.src}`); // 디버깅
             backgroundMusic.play().catch(error => console.log("Music playback failed: ", error));
         }
     }
 
     // 음악 트랙이 끝나면 다음 트랙 재생
     backgroundMusic.addEventListener('ended', function() {
-        console.log('Track ended'); // 디버깅
+        console.log('Track ended'); // 디버그 로그 추가
         if (musicFiles.length > 0) {
-            currentTrackIndex = (currentTrackIndex + 1) % musicFiles.length; // 다음 트랙으로 이동, 마지막 트랙이면 첫 번째 트랙으로
-            playNextTrack(); // 자동으로 다음 트랙 재생
+            currentTrackIndex = (currentTrackIndex + 1) % musicFiles.length;
+            playNextTrack();
         }
-    });
-
-    // 음악 로드 및 재생 오류 처리
-    backgroundMusic.addEventListener('error', function(event) {
-        console.log('Audio playback error:', event); // 디버깅
     });
 
     // 저장된 볼륨 설정 불러오기 및 적용
