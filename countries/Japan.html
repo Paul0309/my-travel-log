@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japan</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../reset.css">
+
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div id="nav-placeholder"></div>
+    <main>
+        <div class="section-title">
+            <h1>일본 여행</h1>
+            <p>JAN.2024 - FEB.2024</p>
+            <p>우주의 조약돌</p>
+        </div>
+        <div class="gallery">
+            <img src="images/Japan/IMG_01.jpeg" alt="Photo 1" data-details="JAN.28.2024, 우주의 조약돌 in ASIANA" decoding="async" loading="lazy">
+            <img src="images/Japan/IMG_02.jpeg" alt="Photo 2" data-details="JAN.28.2024, 우주의 조약돌 in Japan" decoding="async" loading="lazy">
+            <img src="images/Japan/IMG_03.jpeg" alt="Photo 3" data-details="JAN.28.2024, Hilton, ODAIBA" decoding="async" loading="lazy">
+            <img src="images/Japan/IMG_04.jpeg" alt="Photo 4" data-details="JAN.29.2024, 7팀과 첫 째 날" decoding="async" loading="lazy">
+            <img src="images/Japan/IMG_05.jpeg" alt="Photo 5" data-details="JAN.29.2024, 우주의 조약돌 회식 [중국음식]" decoding="async" loading="lazy">
+            <img src="images/Japan/IMG_06.jpeg" alt="Photo 6" data-details="JAN.29.2024, 우주의 조약돌 at 도쿄대학교" decoding="async" loading="lazy">
+            <img src="images/Japan/IMG_07.jpeg" alt="Photo 7" data-details="JAN.29.2024, 도쿄대학교 [강연]" decoding="async" loading="lazy">
+            <img src="images/Japan/IMG_08.jpeg" alt="Photo 8" data-details="JAN.29.2024, 도쿄대학교 [강연]" decoding="async" loading="lazy">
+            <img src="images/Japan/IMG_09.jpeg" alt="Photo 9" data-details="JAN.29.2024, 도쿄대학교 단체사진" decoding="async" loading="lazy">
+            <img src="images/Japan/IMG_10.jpeg" alt="Photo 10" data-details="JAN.29.2024, 도쿄대학교 탐방" decoding="async" loading="lazy">
+            <img src="images/Japan/IMG_11.jpeg" alt="Photo 11" data-details="JAN.29.2024, TeamLab Tokyo" decoding="async" loading="lazy">
+            <img src="images/Japan/IMG_12.jpeg" alt="Photo 12" data-details="JAN.30.2024, JAXA" decoding="async" loading="lazy">
+            <img src="images/Japan/IMG_13.jpeg" alt="Photo 13" data-details="JAN.30.2024, JAXA" decoding="async" loading="lazy">
+            <img src="images/Japan/IMG_14.jpeg" alt="Photo 14" data-details="JAN.30.2024, JAXA" decoding="async" loading="lazy">
+            <img src="images/Japan/IMG_15.jpeg" alt="Photo 15" data-details="JAN.30.2024, JAXA" decoding="async" loading="lazy">
+            <img src="images/Japan/IMG_16.jpeg" alt="Photo 16" data-details="JAN.30.2024, JAXA Documentary" decoding="async" loading="lazy">
+            <img src="images/Japan/IMG_17.jpeg" alt="Photo 17" data-details="JAN.30.2024, Tokyo Tower" decoding="async" loading="lazy">
+            <img src="images/Japan/IMG_19.jpg" alt="Photo 19" data-details="JAN.30.2024, 호텔에서 놀기" decoding="async" loading="lazy">
+            <img src="images/Japan/IMG_20.jpg" alt="Photo 20" data-details="JAN.31.2024, 호텔에서 놀기22" decoding="async" loading="lazy">
+            <img src="images/Japan/IMG_18.jpeg" alt="Photo 18" data-details="JAN.31.2024, Hilton; Last" decoding="async" loading="lazy">
+        </div>
+    </main>
+
+    <!-- Bootstrap Modal -->
+    <div class="modal fade" id="photoModal" tabindex="-1" role="dialog" aria-labelledby="photoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="photoModalLabel">일본 여행</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img id="modal-img" src="" alt="Modal Image" class="img-fluid">
+                    <p id="caption" class="mt-3"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio Player -->
+    <audio id="background-music" loop></audio>
+
+    <!-- Volume Control -->
+    <button id="volume-button" class="volume-button">🔊</button>
+    <div class="volume-control">
+        <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0.5">
+        <button id="next-track" class="btn">⏭️</button>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Define the music files for Japan.html
+        window.musicFiles = [
+            '../music/Japan/FKJ - Way Out.mp3',
+            '../music/Japan/DJ OKAWARI After the Wind.mp3',
+            '../music/Japan/DJ OKAWARI Nostalgic Echoes.mp3'
+        ];
+    </script>
+
+    <div id="footer-placeholder" style="text-align: center;"></div>
+
+    <script src="../scripts.js"></script>
+</body>
+</html>

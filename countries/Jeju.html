@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JeJu Island</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../reset.css">
+
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div id="nav-placeholder"></div>
+    <main>
+        <div class="section-title">
+            <h1>제주도 여행</h1>
+            <p>APR.2024 - APR.2024</p>
+            <p>나, 노해준, 박준하, 신예준, 준하 아버지</p>
+        </div>
+        <div class="gallery">
+            <img src="images/Jeju/" alt="Photo 1" data-details="Date: DEC.2023 - JAN.2024, People: 나, 할머니, 엄마, 이모, 동생">
+            <img src="images/Jeju/" alt="Photo 2" data-details="Date: DEC.2023 - JAN.2024, People: 나, 할머니, 엄마, 이모, 동생">
+            <!-- 추가 이미지들 -->
+        </div>
+    </main>
+
+    <!-- Bootstrap Modal -->
+    <div class="modal fade" id="photoModal" tabindex="-1" role="dialog" aria-labelledby="photoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="photoModalLabel">제주도 여행</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img id="modal-img" src="" alt="Modal Image" class="img-fluid">
+                    <p id="caption" class="mt-3"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio Player -->
+    <audio id="background-music" loop></audio>
+
+    <!-- Volume Control -->
+    <button id="volume-button" class="volume-button">🔊</button>
+    <div class="volume-control">
+        <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0.5">
+        <button id="next-track" class="btn">⏭️</button>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Define the music files for Italy.html
+        window.musicFiles = [
+            '../music/Italy/Dranking song.mp3',
+            '../music/Italy2.mp3'
+        ];
+    </script>
+
+    <div id="footer-placeholder" style="text-align: center;"></div>
+
+    <script src="../scripts.js"></script>
+</body>
+</html>
